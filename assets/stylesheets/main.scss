@@ -1,5 +1,18 @@
+//Colors
+
+//Fonts
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#mother {
+    margin: 0 1em 0 1em;
+    display: grid;
+    grid-template-columns: Auto auto auto auto auto ;
+    article {
+        height: 30vh;
+    }
 }
