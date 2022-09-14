@@ -26,3 +26,19 @@ const getApiData = () => {
     });
 };
 
+let renderContent = () => {
+  apiData.map((data) => createElements(data));
+};
+
+const createElements = (data) => {
+  document.getElementById("mother").innerHTML += `
+        <figure class="card" >
+          
+            <div class="container">
+            <img src='data:image/svg+xml; utf8,${data.icon}'  alt="icon" >
+              <h4><b>${data.title}</b></h4>              
+            </div>
+        </figure>`;
+};
+
+getApiData();
