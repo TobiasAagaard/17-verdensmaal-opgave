@@ -32,7 +32,7 @@ let renderContent = () => {
 
 const createElements = (data) => {
   document.getElementById("mother").innerHTML += `
-        <figure class="card" >
+        <figure class="card" style="background-color:#${data.color};" >
           
             <div class="container">
             <img src='data:image/svg+xml; utf8,${data.icon}'  alt="icon" >
