@@ -4,6 +4,7 @@
 @use "./abstracts/fonts";
 // components
 @use "./components/cards";
+@use "./components/header";
 
 * {
     margin: 0;
@@ -12,6 +13,9 @@
 }
 body {
     @include fonts.font;
+}
+#header {
+    @include header.headerStyle;
 }
 
 #sec1 {
