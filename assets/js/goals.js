@@ -5,7 +5,7 @@ const getApiData = () => {
 
   fetch(apiEndpoint)
   .then((Response) => {
-    if (Response.ok) {
+    if (Response.status === 200) {
       return Response.json();
     }
   })
@@ -29,9 +29,10 @@ const createElements = (data) => {
   document.getElementById("mother").innerHTML += `
     <figure class="card" style="background-color: #${data.color};">
       <div class="container">
-        <img src='data:image/svg+xml; utf8,${data.icon}' alt="icon">
-        <h4>${data.title}</h4>
-        <p>${data.byline}</p>
+        <img class="icon" src='data:image/svg+xml; utf8,${data.icon}' alt="icon">
+        <img class="pic" src='${data.image}'>
+        <h3>${data.title}</h3>
+        <h4>${data.byline}</h4>
       </div>
     </figure>`;
 }
